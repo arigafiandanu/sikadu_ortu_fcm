@@ -117,7 +117,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                                                     right: 20),
                                                 width: Get.width / 4,
                                                 child: const Text(
-                                                  "Nilai UTS",
+                                                  "PTS",
                                                   style: TextStyle(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                                                     right: 20),
                                                 width: Get.width / 4,
                                                 child: const Text(
-                                                  "Nilai Semester",
+                                                  "PAS",
                                                   style: TextStyle(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
@@ -195,7 +195,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                                                     right: 20),
                                                 width: Get.width / 4,
                                                 child: const Text(
-                                                  "Nilai UTS",
+                                                  "PTS",
                                                   style: TextStyle(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
@@ -207,7 +207,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                                                     right: 20),
                                                 width: Get.width / 4,
                                                 child: const Text(
-                                                  "Nilai Semester",
+                                                  "PAS",
                                                   style: TextStyle(
                                                     fontSize: 16,
                                                     fontWeight: FontWeight.bold,
@@ -276,8 +276,8 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
           var dataPelajaranIndex = dataPelajaran[index].data();
           var pelajaran = dataPelajaranIndex['pelajaran'];
           var grade = gradeData['nilai'][kelas]?['semester 2']?[pelajaran];
-          var gradeUts = grade?['nilaiUts'] ?? "0";
-          var gradeSemester = grade?['nilaiSemester'] ?? "0";
+          var pts = grade?['PTS'] ?? "0";
+          var pas = grade?['PAS'] ?? "0";
 
           return Container(
             margin: const EdgeInsets.only(bottom: 10),
@@ -308,7 +308,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                       ),
                       width: Get.width / 5,
                       child: Text(
-                        gradeUts.toString(),
+                        pts.toString(),
                       ),
                     ),
                     Container(
@@ -317,7 +317,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                       ),
                       width: Get.width / 5,
                       child: Text(
-                        gradeSemester.toString(),
+                        pas.toString(),
                       ),
                     ),
                   ],
@@ -369,8 +369,8 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
           var pelajaran = dataPelajaranIndex['pelajaran'];
 
           var grade = gradeData['nilai'][kelas]?['semester 1']?[pelajaran];
-          var gradeUts = grade?['nilaiUts'] ?? "0";
-          var gradeSemester = grade?['nilaiSemester'] ?? "0";
+          var pts = grade?['PTS'] ?? "0";
+          var pas = grade?['PAS'] ?? "0";
 
           return Container(
             margin: const EdgeInsets.only(bottom: 10),
@@ -401,7 +401,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                       ),
                       width: Get.width / 5,
                       child: Text(
-                        gradeUts.toString(),
+                        pts.toString(),
                       ),
                     ),
                     Container(
@@ -410,7 +410,7 @@ class RekapNilaiView extends GetView<RekapNilaiController> {
                       ),
                       width: Get.width / 5,
                       child: Text(
-                        gradeSemester.toString(),
+                        pas.toString(),
                       ),
                     ),
                   ],
