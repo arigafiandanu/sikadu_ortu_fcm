@@ -29,7 +29,7 @@ class LoginView extends GetView<LoginController> {
           SizedBox(
             height: Get.height * 0.4,
             width: Get.width,
-            child: Lottie.asset("assets/lottie/login_admin.json"),
+            child: Lottie.asset("assets/lottie/login-ortu.json"),
           ),
           Column(
             children: [
